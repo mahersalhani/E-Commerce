@@ -1,5 +1,5 @@
 import React from "react";
-import NavBarLogIn from "./../../components/home/NavBarLogIn";
+import NavBarLogIn from "../../components/Utils/NavBarLogIn";
 import Slider from "./../../components/home/Slider";
 
 const HomePage = () => {
