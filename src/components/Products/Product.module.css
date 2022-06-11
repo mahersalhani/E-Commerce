@@ -29,3 +29,9 @@
   letter-spacing: 0;
   line-height: 19px;
 }
+.product-gallary-card {
+  height: 470px !important;
+  width: 370px;
+  border-radius: 29px;
+  background-color: #ffffff;
+}

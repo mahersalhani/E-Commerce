@@ -4,28 +4,29 @@ import logo from "../../images/logo.png";
 import login from "../../images/login.png";
 import cart from "../../images/cart.png";
 import style from "./NavBarLogIn.module.css";
+import { Link } from "react-router-dom";
 
 const NavBarLogIn = () => {
   return (
     <Navbar className="sticky-top" bg="dark" variant="dark" expand="sm">
       <Container>
         <Navbar.Brand>
-          <a href="/">
+          <Link to={"/"}>
             <img src={logo} alt="logo" className="logo" />
-          </a>
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <FormControl type="search" placeholder="ابحث..." className="me-2 w-100" aria-label="Search" />
           <Nav className="me-auto">
-            <Nav.Link href="/login" className={`${style["nav-text"]} d-flex mt-3 justify-content-center`}>
+            <Link to="/login" className={`${style["nav-text"]} nav-link d-flex mt-3 justify-content-center`}>
               <img src={login} className="login-img" alt="sfvs" />
               <p style={{ color: "white" }}>تسجيل</p>
-            </Nav.Link>
-            <Nav.Link href="/cart" className={`${style["nav-text"]} d-flex mt-3 justify-content-center`} style={{ color: "white" }}>
+            </Link>
+            <Link to="/cart" className={`${style["nav-text"]} nav-link d-flex mt-3 justify-content-center`} style={{ color: "white" }}>
               <img src={cart} className="login-img" alt="sfvs" />
               <p style={{ color: "white" }}>العربه</p>
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
