@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import ProductGallery from "./ProductGallery";
+import ProductText from "./ProductText";
 
 const ProductDetails = () => {
   return (
@@ -9,7 +10,9 @@ const ProductDetails = () => {
         <Col lg="4">
           <ProductGallery />
         </Col>
-        <Col lg="8"></Col>
+        <Col lg="8">
+          <ProductText />
+        </Col>
       </Row>
     </div>
   );

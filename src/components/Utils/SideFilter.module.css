@@ -5,3 +5,32 @@
   background: #fff;
   box-shadow: 2px 2px 15px 6px #ccc;
 }
+
+.filter-title {
+  color: #555550;
+  font-family: "Almarai";
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: right;
+}
+.filter-sub {
+  color: #555550;
+  font-family: "Almarai";
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 17px;
+  text-align: center;
+}
+/* end filter */
+
+.filter-holder {
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0px 0px 18px 5px #ccc;
+  padding-right: 5px;
+  top: 10px;
+  width: 135px;
+}
