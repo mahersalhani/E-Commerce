@@ -11,6 +11,7 @@ import ShopProductsPage from "./pages/Products/ShopProductsPage";
 import ProductDetalisPage from "./pages/Products/ProductDetailsPage";
 import CartPage from "./pages/cart/CartPage";
 import ChoosePayMethoudPage from "./pages/Chackout/ChoosePayMethoudPage";
+import AdminAllProductsPage from "./pages/Admin/AdminAllProductsPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/products/:id" element={<ProductDetalisPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/order/paymethoud" element={<ChoosePayMethoudPage />} />
+        <Route path="/admin/allproducts" element={<AdminAllProductsPage />} />
       </Routes>
       <Footer />
     </Fragment>
