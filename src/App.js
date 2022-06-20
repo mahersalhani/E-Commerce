@@ -14,6 +14,10 @@ import ChoosePayMethoudPage from "./pages/Chackout/ChoosePayMethoudPage";
 import AdminAllProductsPage from "./pages/Admin/AdminAllProductsPage";
 import AdminAllOrderPage from "./pages/Admin/AdminAllOrderPage";
 import AdminOrderDetalisPage from "./pages/Admin/AdminOrderDetalisPage";
+import AdminAddBrandPage from "./pages/Admin/AdminAddBrandPage";
+import AdminAddCategoryPage from "./pages/Admin/AdminAddCategoryPage";
+import AdminAddsubCategoryPage from "./pages/Admin/AdminAddsubCategoryPage";
+import AdminAddProductPage from "./pages/Admin/AdminAddProductPage";
 
 function App() {
   return (
@@ -32,6 +36,10 @@ function App() {
         <Route path="/admin/allproducts" element={<AdminAllProductsPage />} />
         <Route path="/admin/allorders" element={<AdminAllOrderPage />} />
         <Route path="/admin/orders/:id" element={<AdminOrderDetalisPage />} />
+        <Route path="/admin/addbrand" element={<AdminAddBrandPage />} />
+        <Route path="/admin/addcategory" element={<AdminAddCategoryPage />} />
+        <Route path="/admin/addsubcategory" element={<AdminAddsubCategoryPage />} />
+        <Route path="/admin/addproduct" element={<AdminAddProductPage />} />
       </Routes>
       <Footer />
     </Fragment>
