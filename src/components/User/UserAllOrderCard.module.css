@@ -1,0 +1,34 @@
+.rate-count {
+  color: #979797;
+  font-family: "Almarai";
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+
+.cart-title {
+  color: #555550;
+  font-family: Almarai;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: right;
+}
+
+.cart-text {
+  color: #979797;
+  font-family: "Almarai";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: right;
+}
+.cart-rate {
+  color: #ffc107;
+  font-family: "Almarai";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: right;
+}

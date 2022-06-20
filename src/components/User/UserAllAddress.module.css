@@ -1,0 +1,17 @@
+.admin-content-text {
+  color: #555550;
+  font-family: Almarai;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 28px;
+  text-align: right;
+}
+.btn-add-address {
+  border: none;
+  height: 50px;
+  width: 100%;
+  color: white;
+  border-radius: 9px;
+  background-color: #272727;
+}

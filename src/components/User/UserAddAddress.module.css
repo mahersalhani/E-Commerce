@@ -1,0 +1,33 @@
+.admin-content-text {
+  color: #555550;
+  font-family: Almarai;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 28px;
+  text-align: right;
+}
+.input-form {
+  height: 37px;
+  width: 100%;
+  border: 1px solid #979797;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.input-form-area {
+  width: 100%;
+  border: 1px solid #979797;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.btn-save {
+  border: none;
+  color: white;
+  height: 46px;
+  width: 150px;
+  border-radius: 9px;
+  background-color: #272727;
+}
+.btn-save:hover {
+  color: rgb(164, 164, 164);
+}
