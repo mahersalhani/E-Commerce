@@ -24,6 +24,7 @@ import UserAllAddresPage from "./pages/User/UserAllAddresPage";
 import UserAddAddressPage from "./pages/User/UserAddAddressPage";
 import UserEditAddressPage from "./pages/User/UserEditAddressPage";
 import UserProfilePage from "./pages/User/UserProfilePage";
+import ErrorPage from "./pages/Error/ErrorPage";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/user/add-address" element={<UserAddAddressPage />} />
         <Route path="/user/edit-address" element={<UserEditAddressPage />} />
         <Route path="/user/profile" element={<UserProfilePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Fragment>
