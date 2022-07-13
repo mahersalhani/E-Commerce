@@ -3,11 +3,12 @@
 import rootReducer from "./reducers/rootReducer";
 import { configureStore } from "@reduxjs/toolkit";
 
-// const initailState = {};
-// const meddleware = [thunk];
-
 const store = configureStore({
   reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export default store;

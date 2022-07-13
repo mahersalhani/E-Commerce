@@ -306,6 +306,10 @@ body {
   background-color: #ffffff;
 }
 
+.center {
+  text-align: center;
+}
+
 .product-cart-add {
   cursor: pointer;
   text-align: center;
@@ -656,3 +660,9 @@ body {
   text-align: center;
 }
 /* end filter */
+
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}

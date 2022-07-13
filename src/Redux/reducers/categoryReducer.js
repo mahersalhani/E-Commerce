@@ -22,6 +22,12 @@ const categoryReducer = createSlice({
         loading: true,
       };
     },
+    createCategory(state, action) {
+      return {
+        category: action.payload,
+        loading: false,
+      };
+    },
   },
 });
 

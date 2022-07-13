@@ -20,6 +20,7 @@ const BrandCard = ({ img }) => {
           borderRadius: "8px",
           border: "none",
           backgroundColor: "#FFFFFF",
+          boxShadow: "-1px 2px 5px 4px #ccc",
         }}
       >
         <Card.Img style={{ width: "100%", height: "151px" }} src={img} />
