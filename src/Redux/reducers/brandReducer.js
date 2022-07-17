@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   brand: [],
+  oneBrand: [],
   loading: true,
 };
 
@@ -25,6 +26,13 @@ const brandReducer = createSlice({
     createBrand(state, action) {
       return {
         brand: action.payload,
+        loading: false,
+      };
+    },
+    getOneBrand(state, action) {
+      return {
+        brand: [],
+        oneBrand: action.payload,
         loading: false,
       };
     },

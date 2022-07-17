@@ -1,6 +1,6 @@
 import { categoryAction } from "./../reducers/categoryReducer";
 import useGetData from "./../../hooks/useGetData";
-import { userInsertDataWithImage } from "../../hooks/useInsertData";
+import { useInsertDataWithImage } from "../../hooks/useInsertData";
 
 // get all category
 export const getAllCategory = (limit, page) => {
@@ -25,7 +25,7 @@ export const createNewCategory = (formData) => {
     try {
       // const res = await baseUrl.get("/api/v1/categories");
 
-      const respon = await userInsertDataWithImage(`/api/v1/categories`, formData);
+      const respon = await useInsertDataWithImage(`/api/v1/categories`, formData);
 
       dispatch(categoryAction.createCategory([respon.status]));
     } catch (err) {

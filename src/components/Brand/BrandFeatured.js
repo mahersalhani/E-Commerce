@@ -7,11 +7,9 @@ import HomeBrandHook from "./../../hook/brand/home-brand-hook";
 const BrandFeatured = ({ title, btntitle }) => {
   const [brands, loading] = HomeBrandHook();
 
-  console.log(brands);
-
   return (
     <Container>
-      {!loading && brands[0] !== 201 && brands.data.length > 0 && (
+      {!loading && brands[0] !== 201 && brands.data && brands.data.length > 0 && (
         <Fragment>
           <SubTiltle title={title} btntitle={btntitle} pathText="/allbrand" />
           <Row className="my-1 d-flex justify-content-between">

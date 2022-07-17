@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   subcategory: [],
+  subcategoryOnId: [],
   loading: true,
 };
 
@@ -11,6 +12,7 @@ const subCategoryReducer = createSlice({
   reducers: {
     createSubCategory(state, action) {
       return {
+        ...state,
         subcategory: action.payload,
         loading: false,
       };
@@ -19,6 +21,12 @@ const subCategoryReducer = createSlice({
       return {
         subcategory: action.payload,
         loading: true,
+      };
+    },
+    getSubCategory(state, action) {
+      return {
+        subcategoryOnId: action.payload,
+        loading: false,
       };
     },
   },

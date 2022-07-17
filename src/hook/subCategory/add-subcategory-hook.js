@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getAllCategory } from "./../../Redux/actions/categoryAction";
@@ -12,6 +12,8 @@ const AddSubCategoryHook = () => {
   const [loading, setLoading] = useState(true);
 
   const dispatch = useDispatch();
+
+  const option = useRef();
 
   useEffect(() => {
     if (!navigator.onLine) {
@@ -50,7 +52,6 @@ const AddSubCategoryHook = () => {
 
     if (id === "0") {
       notify("من فضلك اختر تصنيف رئيسي", "warn");
-
       return;
     }
 
@@ -62,6 +63,8 @@ const AddSubCategoryHook = () => {
     setLoading(true);
 
     await dispatch(createNewSubCategory({ name, category: id }));
+
+    option.current.value = 0;
 
     setLoading(false);
   };
@@ -83,7 +86,7 @@ const AddSubCategoryHook = () => {
     }
   }, [loading, res]);
 
-  return [id, name, loading, categories, res, handelSubmit, handelChange, onCahngeName];
+  return [id, name, loading, categories, res, handelSubmit, handelChange, onCahngeName, option];
 };
 
 export default AddSubCategoryHook;

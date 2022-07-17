@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import AddSubCategoryHook from "./../../hook/subCategory/add-subcategory-hook";
 
 const AdminAddSubCategory = () => {
-  const [id, name, loading, categories, res, handelSubmit, handelChange, onCahngeName] = AddSubCategoryHook();
+  const [id, name, loading, categories, res, handelSubmit, handelChange, onCahngeName, option] = AddSubCategoryHook();
 
   return (
     <div>
@@ -21,8 +21,8 @@ const AdminAddSubCategory = () => {
             placeholder="اسم التصنيف الفرعي"
           />
 
-          <select name="category" id="cat" className={`${style["select"]} mt-3 px-2 `} onChange={handelChange}>
-            <option value="0"> اختر تصنيف رئيسي</option>
+          <select name="category" id="cat" ref={option} className={`${style["select"]} mt-3 px-2 `} onChange={handelChange}>
+            <option value="0">اختر تصنيف رئيسي</option>
             {categories.data
               ? categories.data.map((el, i) => {
                   return (

@@ -7,10 +7,10 @@ const ProductDetails = () => {
   return (
     <div>
       <Row className="py-3">
-        <Col lg="4">
+        <Col>
           <ProductGallery />
         </Col>
-        <Col lg="8">
+        <Col>
           <ProductText />
         </Col>
       </Row>
