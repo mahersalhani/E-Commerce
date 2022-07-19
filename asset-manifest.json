@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/E-Commerce/static/css/main.25c5a7e7.css",
-    "main.js": "/E-Commerce/static/js/main.ca3689b3.js",
-    "static/media/laptops.png": "/E-Commerce/static/media/laptops.a5a6ab642345b5d38784.png",
-    "static/media/slider4.png": "/E-Commerce/static/media/slider4.8049dedb7c458a0534a5.png",
-    "static/media/prod4.png": "/E-Commerce/static/media/prod4.60c973db7361e54bb831.png",
-    "static/media/slider1.png": "/E-Commerce/static/media/slider1.2d6dc5a9c0fd289461ee.png",
-    "static/media/prod3.png": "/E-Commerce/static/media/prod3.c073f706ba444448c519.png",
-    "static/media/mobile.png": "/E-Commerce/static/media/mobile.1c4bc892a60e36742151.png",
-    "static/media/prod1.png": "/E-Commerce/static/media/prod1.9f9a0d840227c590ac5d.png",
-    "static/media/avatar.png": "/E-Commerce/static/media/avatar.f5ed20588df8bb546e2d.png",
-    "index.html": "/E-Commerce/index.html",
-    "main.25c5a7e7.css.map": "/E-Commerce/static/css/main.25c5a7e7.css.map",
-    "main.ca3689b3.js.map": "/E-Commerce/static/js/main.ca3689b3.js.map"
+    "main.css": "/static/css/main.9aa8c6fd.css",
+    "main.js": "/static/js/main.f8c6da8b.js",
+    "static/media/laptops.png": "/static/media/laptops.a5a6ab642345b5d38784.png",
+    "static/media/slider4.png": "/static/media/slider4.8049dedb7c458a0534a5.png",
+    "static/media/prod4.png": "/static/media/prod4.60c973db7361e54bb831.png",
+    "static/media/slider1.png": "/static/media/slider1.2d6dc5a9c0fd289461ee.png",
+    "static/media/prod3.png": "/static/media/prod3.c073f706ba444448c519.png",
+    "static/media/mobile.png": "/static/media/mobile.1c4bc892a60e36742151.png",
+    "static/media/avatar.png": "/static/media/avatar.f5ed20588df8bb546e2d.png",
+    "index.html": "/index.html",
+    "main.9aa8c6fd.css.map": "/static/css/main.9aa8c6fd.css.map",
+    "main.f8c6da8b.js.map": "/static/js/main.f8c6da8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.25c5a7e7.css",
-    "static/js/main.ca3689b3.js"
+    "static/css/main.9aa8c6fd.css",
+    "static/js/main.f8c6da8b.js"
   ]
 }
