@@ -21,6 +21,13 @@ const productsReducer = createSlice({
         loading: false,
       };
     },
+    getAllProductSearch(state, action) {
+      return {
+        ...state,
+        allProducts: action.payload,
+        loading: false,
+      };
+    },
     getError(state, action) {
       return {
         product: action.payload,

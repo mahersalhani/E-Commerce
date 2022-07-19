@@ -96,3 +96,18 @@ export const updateProduct = (id, formData) => {
     }
   };
 };
+
+// get all prod with query params
+export const getAllProductsSearch = (queryString) => {
+  return async (dispatch) => {
+    try {
+      const respon = await useGetData(`/api/v1/products?${queryString}`);
+
+      dispatch(productAction.getAllProductSearch(respon));
+    } catch (err) {
+      const error = "error " + err;
+
+      dispatch(productAction.getError(error));
+    }
+  };
+};

@@ -3,8 +3,14 @@ import UnopDropdown from "unop-react-dropdown";
 import sort from "../../images/sort.png";
 import style from "./SearchCountResult.module.css";
 
-const SearchCountResult = ({ title }) => {
+const SearchCountResult = ({ title, onClick }) => {
   const handler = () => {};
+
+  const clickMe = (key) => {
+    sessionStorage.setItem("sortType", key);
+    onClick();
+  };
+
   return (
     <div className="d-flex justify-content-between pt-3 px-2">
       <div className={style["sub-title"]}>{title}</div>
@@ -23,10 +29,21 @@ const SearchCountResult = ({ title }) => {
           hover
         >
           <div className={style["card-filter"]}>
-            <div className={`border-bottom ${style["card-filter-item"]}`}>الاكثر مبيعا</div>
-            <div className={`border-bottom ${style["card-filter-item"]}`}>الاعلي تقييما</div>
-            <div className={`border-bottom ${style["card-filter-item"]}`}>السعر من الاقل للاعلي</div>
-            <div className={style["card-filter-item"]}>السعر من الاعلي للاقل</div>
+            <div onClick={() => clickMe("")} className={`border-bottom ${style["card-filter-item"]}`}>
+              بدون ترتيب
+            </div>
+            <div onClick={() => clickMe("الاكثر مبيعا")} className={`border-bottom ${style["card-filter-item"]}`}>
+              الاكثر مبيعا
+            </div>
+            <div onClick={() => clickMe("الاعلي تقييما")} className={`border-bottom ${style["card-filter-item"]}`}>
+              الاعلي تقييما
+            </div>
+            <div onClick={() => clickMe("السعر من الاقل للاعلي")} className={`border-bottom ${style["card-filter-item"]}`}>
+              السعر من الاقل للاعلي
+            </div>
+            <div onClick={() => clickMe("السعر من الاعلي للاقل")} className={style["card-filter-item"]}>
+              السعر من الاعلي للاقل
+            </div>
           </div>
         </UnopDropdown>
       </div>

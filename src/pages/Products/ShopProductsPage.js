@@ -8,9 +8,7 @@ import SideFilter from "../../components/Utils/SideFilter";
 import ViewSearchProductHook from "./../../hook/products/view-search-product-hook";
 
 const ShopProductsPage = () => {
-  const [items, pagination, onPress] = ViewSearchProductHook();
-
-  console.log(pagination);
+  const [results, items, pagination, onPress, getProduct] = ViewSearchProductHook();
 
   let pageCount = 0;
 
@@ -22,10 +20,15 @@ const ShopProductsPage = () => {
     <div style={{ minHeight: "720px" }}>
       <CategoryHeader />
       <Container>
-        <SearchCountResult title={`يوجد ${items.length} نتيجة بحث`} />
+        <SearchCountResult onClick={getProduct} title={`يوجد ${results} نتيجة بحث`} />
         <SideFilter />
-        <CardProductsContainer product={items} title="" btntitle="" />
-        <Pagination pageCount={pageCount} onPress={onPress} />
+        {results > 0 ? (
+          <CardProductsContainer product={items} title="" btntitle="" />
+        ) : (
+          //
+          <h1 className="no_results">لا يوجد نتائج...</h1>
+        )}
+        {pageCount > 0 && <Pagination pageCount={pageCount} onPress={onPress} />}
       </Container>
     </div>
   );

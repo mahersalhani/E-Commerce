@@ -5,8 +5,16 @@ import login from "../../images/login.png";
 import cart from "../../images/cart.png";
 import style from "./NavBarLogIn.module.css";
 import { Link } from "react-router-dom";
+import NavbarSearchHook from "./../../hook/search/navbar-search-hook";
 
 const NavBarLogIn = () => {
+  const [onChangeSearch] = NavbarSearchHook();
+
+  let word = "";
+  if (sessionStorage.getItem("searchWord") !== null) {
+    word = sessionStorage.getItem("searchWord");
+  }
+
   return (
     <Navbar className="sticky-top" bg="dark" variant="dark" expand="sm">
       <Container>
@@ -17,7 +25,15 @@ const NavBarLogIn = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <FormControl type="search" placeholder="ابحث..." className="me-2 w-100" aria-label="Search" />
+          <FormControl
+            //
+            onChange={onChangeSearch}
+            value={word}
+            type="search"
+            placeholder="ابحث..."
+            className="me-2 w-100"
+            aria-label="Search"
+          />
           <Nav className="me-auto">
             <Link to="/login" className={`${style["nav-text"]} nav-link d-flex mt-3 justify-content-center`}>
               <img src={login} className="login-img" alt="sfvs" />
