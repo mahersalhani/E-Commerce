@@ -58,8 +58,6 @@ export const createNewProduct = (formatData) => {
     } catch (err) {
       const error = "error " + err;
 
-      console.log(err);
-
       dispatch(productAction.getError(error));
     }
   };
@@ -74,8 +72,6 @@ export const deleteProduct = (id) => {
     } catch (err) {
       const error = "error " + err;
 
-      console.log(err);
-
       dispatch(productAction.getError(error));
     }
   };
@@ -89,8 +85,6 @@ export const updateProduct = (id, formData) => {
       dispatch(productAction.updateProduct(respon));
     } catch (err) {
       const error = "error " + err;
-
-      console.log(err);
 
       dispatch(productAction.getError(error));
     }

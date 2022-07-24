@@ -34,7 +34,6 @@ const AddCategoryHook = () => {
     event.preventDefault();
     if (name === "" || selectedFile === null) {
       notify("من فضلك اكمل البيانات", "warn");
-      console.log("من فضلك اكمل البيانات");
       return;
     }
     const formData = new FormData();
@@ -51,7 +50,6 @@ const AddCategoryHook = () => {
       setImg(avatar);
       setName("");
       setSelectedFile(null);
-      console.log("تم الانتهاء");
       setLoading(true);
       setTimeout(() => setIsPress(false), 1000);
 

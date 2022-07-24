@@ -211,7 +211,6 @@ const AdimeEditProductsHook = (id) => {
     Array.from(Array(Object.keys(images).length).keys()).map((item, i) => {
       if (images[i].length <= 500) {
         convertURLtoFile(images[i]).then((val) => {
-          console.log("Image");
           itemImages.push(val);
         });
       } else {
@@ -235,17 +234,12 @@ const AdimeEditProductsHook = (id) => {
     formData.append("brand", BrandId);
 
     setTimeout(() => {
-      console.log(imageCover);
-      console.log(itemImages);
-
       formData.append("imageCover", imageCover);
       itemImages.map((itemImage) => formData.append("images", itemImage));
     }, 1000);
 
     colors.map((color) => formData.append("colors", color));
     subIdsArray.map((id) => formData.append("subcategories", id));
-
-    console.log(selectedSubId);
 
     setTimeout(async () => {
       setLoadingSpiner(true);
