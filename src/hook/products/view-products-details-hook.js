@@ -59,7 +59,16 @@ const ViewProductsDetailsHook = (prodId) => {
   if (!prodsLike) productsLike = [];
   else productsLike = prodsLike;
 
-  return [item, images, brandItem, productsLike];
+  let prod = [];
+
+  if (productsLike) {
+    if (productsLike.data) prod = productsLike.data.slice(0, 4);
+    else prod = [];
+  } else {
+    prod = [];
+  }
+
+  return [item, images, brandItem, prod];
 };
 
 export default ViewProductsDetailsHook;

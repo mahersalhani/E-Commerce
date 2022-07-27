@@ -36,7 +36,7 @@ export const forgetPasswordUser = (data) => {
 
       dispatch(authAction.forgetPasswordUser(respon));
     } catch (err) {
-      dispatch(authAction.getError(err.response));
+      dispatch(authAction.getError(err));
     }
   };
 };

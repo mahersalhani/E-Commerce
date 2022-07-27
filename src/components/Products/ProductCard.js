@@ -1,12 +1,13 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
-import favoff from "../../images/fav-off.png";
+import { Card, Col, Spinner } from "react-bootstrap";
 import rate from "../../images/rate.png";
 import style from "./Product.module.css";
-import { Link, useParams } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import ProductCardHook from "./../../hook/products/product-card-hook";
+// const { id } = useParams();
 
-const ProductCard = ({ item }) => {
-  const { id } = useParams();
+const ProductCard = ({ item, favProd }) => {
+  const [spinner, favImg, handelFav] = ProductCardHook(favProd, item);
 
   return (
     <Col xs="6" sm="6" md="4" lg="3" className="d-flex">
@@ -32,15 +33,21 @@ const ProductCard = ({ item }) => {
           </Link>
         )} */}
         <div className="d-flex justify-content-end mx-2">
-          <img
-            src={favoff}
-            alt=""
-            className="text-center"
-            style={{
-              height: "24px",
-              width: "26px",
-            }}
-          />
+          {spinner ? (
+            <Spinner className="mt-2" animation="border" variant="primary" />
+          ) : (
+            <img
+              src={favImg}
+              onClick={handelFav}
+              alt=""
+              className="text-center"
+              style={{
+                height: "24px",
+                width: "26px",
+                cursor: "pointer",
+              }}
+            />
+          )}
         </div>
         <Card.Body>
           <Card.Title>
@@ -50,7 +57,7 @@ const ProductCard = ({ item }) => {
             <div className="d-flex justify-content-between ">
               <div className="d-flex">
                 <img className="" src={rate} alt="" height="16px" width="16px" />
-                <div className={`${style["card-rate"]} mx-2`}>{item.ratingsQuantity}</div>
+                <div className={`${style["card-rate"]} mx-2`}>{item.ratingsAverage || 0}</div>
               </div>
               <div className="d-flex">
                 <div className={`${style["card-currency"]} mx-1`}>TL</div>
@@ -60,6 +67,8 @@ const ProductCard = ({ item }) => {
           </Card.Text>
         </Card.Body>
       </Card>
+
+      <ToastContainer />
     </Col>
   );
 };

@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const ViewSearchProductHook = () => {
   const dispatch = useDispatch();
 
-  const eachPage = 4;
+  const eachPage = 15;
 
   let word = "",
     queyCat = "",

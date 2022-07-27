@@ -28,7 +28,7 @@ const ShopProductsPage = () => {
           //
           <h1 className="no_results">لا يوجد نتائج...</h1>
         )}
-        {pageCount > 0 && <Pagination pageCount={pageCount} onPress={onPress} />}
+        {pageCount > 1 && <Pagination pageCount={pageCount} onPress={onPress} />}
       </Container>
     </div>
   );

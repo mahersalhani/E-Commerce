@@ -23,7 +23,7 @@ const ProductText = () => {
           <div className={`${style["cat-title"]} d-inline`}>{item.title}</div>
           <div className="cat-rate d-inline mx-3">
             <div>
-              {item.ratingsQuantity}
+              {item.ratingsAverage || 0}
               <img style={{ width: "10px" }} src={rate} alt={"rate"} />
             </div>
           </div>

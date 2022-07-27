@@ -10,15 +10,13 @@ import { useParams } from "react-router-dom";
 const ProductDetailsPage = () => {
   const { id } = useParams();
 
-  const [, , , productsLike] = ViewProductsDetailsHook(id);
+  const [item, images, brandItem, prod] = ViewProductsDetailsHook(id);
 
-  let prod = [];
-
-  if (productsLike) {
-    if (productsLike.data) prod = productsLike.data.slice(0, 4);
-    else prod = [];
-  } else {
-    prod = [];
+  let rateAvg = 0;
+  let rateQty = 0;
+  if (item) {
+    rateAvg = item.ratingsAverage || 0;
+    rateQty = item.ratingsQuantity || 0;
   }
 
   return (
@@ -26,7 +24,7 @@ const ProductDetailsPage = () => {
       <CategoryHeader />
       <Container>
         <ProductDetails />
-        <RateContainer />
+        <RateContainer rateAvg={rateAvg} rateQty={rateQty} />
         <CardProductsContainer product={prod} title="منتجات قد تعجبك" />
       </Container>
     </div>
