@@ -6,6 +6,8 @@ import productReducer from "./productsReducer";
 import authReducer from "./authReducer";
 import reviewReducer from "./../reducers/reviewReducer";
 import wishlistReducer from "./../reducers/wishlistReducer";
+import couponReducer from "./../reducers/couponReducer";
+import adressReducer from "./../reducers/adressReducer";
 
 const rootReducer = {
   Brand: brandReducer,
@@ -15,6 +17,8 @@ const rootReducer = {
   auth: authReducer,
   review: reviewReducer,
   wishlist: wishlistReducer,
+  coupon: couponReducer,
+  address: adressReducer,
 };
 
 export default rootReducer;

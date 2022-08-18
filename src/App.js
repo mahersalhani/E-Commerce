@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Utils/Footer";
 import NavBarLogIn from "./components/Utils/NavBarLogIn";
@@ -29,10 +28,12 @@ import AdminEditProdPage from "./pages/Admin/AdminEditProdPage";
 import ForgetPasswordPage from "./pages/Auth/ForgetPasswordPage";
 import VerifyCodePage from "./pages/Auth/VerifyCodePage";
 import ResetPasswordPage from "./pages/Auth/ResetPasswordPage";
+import AdminAddCouponPage from "./pages/Admin/AdminAddCouponePage";
+import AdminEditCouponPage from "./pages/Admin/AdminEditCouponPage";
 
 function App() {
   return (
-    <Fragment>
+    <>
       <NavBarLogIn />
       <Routes>
         <Route index element={<HomePage />} />
@@ -52,11 +53,13 @@ function App() {
         <Route path="/admin/addsubcategory" element={<AdminAddsubCategoryPage />} />
         <Route path="/admin/addproduct" element={<AdminAddProductPage />} />
         <Route path="/admin/editproduct/:id" element={<AdminEditProdPage />} />
+        <Route path="/admin/addcoupon" element={<AdminAddCouponPage />} />
+        <Route path="/admin/editcoupon/:id" element={<AdminEditCouponPage />} />
         <Route path="/user/allorders" element={<UserAllOrdersPage />} />
         <Route path="/user/favoriteproducts" element={<UserFavoriteProductsPage />} />
         <Route path="/user/addresses" element={<UserAllAddresPage />} />
         <Route path="/user/add-address" element={<UserAddAddressPage />} />
-        <Route path="/user/edit-address" element={<UserEditAddressPage />} />
+        <Route path="/user/edit-address/:id" element={<UserEditAddressPage />} />
         <Route path="/user/profile" element={<UserProfilePage />} />
         <Route path="/user/forget-password" element={<ForgetPasswordPage />} />
         <Route path="/user/verify-code" element={<VerifyCodePage />} />
@@ -64,7 +67,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
-    </Fragment>
+    </>
   );
 }
 

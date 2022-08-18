@@ -26,6 +26,9 @@ const AdminSideBar = () => {
         <Link to="/admin/addproduct" style={{ textDecoration: "none" }}>
           <div className={`${style["admin-side-text"]} my-1 border-bottom p-2 mx-auto text-center`}>اضف منتج</div>
         </Link>
+        <Link to="/admin/addcoupon" style={{ textDecoration: "none" }}>
+          <div className={`${style["admin-side-text"]} my-1 border-bottom p-2 mx-auto text-center`}>اضف كوبون</div>
+        </Link>
       </div>
     </div>
   );

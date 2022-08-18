@@ -32,7 +32,7 @@ const UserFavoriteProduct = () => {
     <div>
       <div className={`${style["admin-content-text"]} pb-4`}>قائمة المفضلة</div>
       <Row className="justify-content-start">
-        {items.length > 0 ? (
+        {items && items.length > 0 ? (
           //
           <CardProductsContainer product={items} title="" btntitle="" />
         ) : (
