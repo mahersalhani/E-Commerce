@@ -23,7 +23,7 @@ const DeleteRateHook = (user, id) => {
 
   let isUser = false;
 
-  if (user._id === loggedUser._id) {
+  if (user._id === loggedUser.id || user._id === loggedUser._id) {
     isUser = true;
   }
 

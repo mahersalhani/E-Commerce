@@ -7,6 +7,8 @@ const initialState = {
   verifyCodeUser: [],
   resetPasswordUser: [],
   error: [],
+  updatedUserData: [],
+  updatedPass: [],
   loading: true,
 };
 
@@ -57,6 +59,20 @@ const authReducer = createSlice({
       return {
         creatUser: action.payload,
         loading: true,
+      };
+    },
+    updateUserData(state, action) {
+      return {
+        ...state,
+        updatedUserData: action.payload,
+        loading: true,
+      };
+    },
+    updateUserPassword(state, action) {
+      return {
+        ...state,
+        updatedPass: action.payload,
+        error: [],
       };
     },
     getError(state, action) {

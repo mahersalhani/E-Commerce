@@ -3,15 +3,12 @@ import notify from "./../useNotify";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { loginUser } from "../../Redux/actions/authAction";
-import { useNavigate } from "react-router-dom";
 
 const LoginHook = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(true);
   const [spinner, setSpinner] = useState(false);
-
-  const nav = useNavigate();
 
   const dispatch = useDispatch();
   const res = useSelector((state) => state.auth.loginUser);

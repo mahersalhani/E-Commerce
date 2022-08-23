@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Modal, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

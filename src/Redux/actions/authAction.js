@@ -66,3 +66,29 @@ export const resetPasswordUser = (data) => {
     }
   };
 };
+
+// update user data
+export const updateUserData = (data) => {
+  return async (dispatch) => {
+    try {
+      const respon = await useUpdateData(`/api/v1/users/updateMe`, data);
+
+      dispatch(authAction.updateUserData(respon));
+    } catch (err) {
+      dispatch(authAction.updateUserData(err.response));
+    }
+  };
+};
+
+// update user password
+export const updateUserPassword = (data) => {
+  return async (dispatch) => {
+    try {
+      const respon = await useUpdateData(`/api/v1/users/changeMyPassword`, data);
+
+      dispatch(authAction.updateUserPassword(respon));
+    } catch (err) {
+      dispatch(authAction.updateUserData(err.response));
+    }
+  };
+};

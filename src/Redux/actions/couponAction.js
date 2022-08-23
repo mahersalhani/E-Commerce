@@ -60,7 +60,6 @@ export const getOneCoupon = (copoun) => {
 export const updateOneCoupon = (copoun, data) => {
   return async (dispatch) => {
     try {
-      console.log(1);
       const respon = await useUpdateData(`/api/v1/coupons/${copoun}`, data);
 
       dispatch(copunAction.updateOneCoupon(respon));

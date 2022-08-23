@@ -46,7 +46,6 @@ const EditRateHook = (review) => {
 
   useEffect(() => {
     if (!loading) {
-      console.log(res);
       if (res.status === 201) {
         notify("تم التعديل بنجاح", "success");
         setTimeout(() => {
